@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const createHTML = require('create-html');
 const sizeOf = require('image-size');
+const chalk = require('chalk');
 
 //排序
 const sortByFileName = files =>  {
@@ -46,6 +47,7 @@ function toCss(dir, fileList){
       `
     }
   })
+  console.log(chalk.green('css successed!'))
   return _css;
 }
 
@@ -96,6 +98,7 @@ program.version('1.0.0', '-v, --version')
         favicon: 'favicon.png'
       })
       fs.writeFile('fbf.html', html, function (err) {
+        console.log(chalk.green('html successed!'))
         if (err) console.log(err)
       })
     })

@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.1",
     "commander": "^2.15.1",
     "create-html": "^4.1.0",
     "image-size": "^0.6.3",
