@@ -15,4 +15,4 @@ npm i fbf -g
 ```bash
 fbf start img  # 对 img 目录中的图片进行处理
 ```
-
+done!
