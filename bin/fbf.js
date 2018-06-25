@@ -50,7 +50,7 @@ function toCss(dir, fileList){
 }
 
 program.version('1.0.0', '-v, --version')
-  .command('init <dir>')
+  .command('start <dir>')
   .action((dir) => {
 
     const imgPath = path.resolve(dir)
