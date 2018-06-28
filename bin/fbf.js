@@ -61,6 +61,10 @@ program.version('1.0.0', '-v, --version')
     fs.readdir(imgPath, (err, file) => {
       const newFile = sortByFileName(file)
       deleteDS(newFile)
+      if(newFile.length < 2){
+        console.log(chalk.red('图片数量必须大于两张!'))
+        return;
+      }
       imgSize = sizeOf(dir + '/' +file[0]);
       let frameCss = toCss(dir, newFile)
 
@@ -74,7 +78,7 @@ program.version('1.0.0', '-v, --version')
         background-size: ${imgSize.width}px ${imgSize.height}px;
         background-repeat: no-repeat;
         animation-name: keyframes-img;
-        animation-duration: 0.36s;
+        animation-duration: 3s;
         animation-delay: 0s;
         animation-iteration-count: infinite;
         animation-fill-mode: forwards;
