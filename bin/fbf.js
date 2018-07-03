@@ -5,6 +5,8 @@ const path = require('path');
 const createHTML = require('create-html');
 const sizeOf = require('image-size');
 const chalk = require('chalk');
+const pkg = require('../package.json');
+
 
 //排序
 const sortByFileName = files =>  {
@@ -51,7 +53,7 @@ function toCss(dir, fileList){
   return _css;
 }
 
-program.version('1.0.0', '-v, --version')
+program.version(pkg.version, '-v, --version')
   .command('start <dir>')
   .action((dir) => {
 
